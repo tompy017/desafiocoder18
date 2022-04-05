@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Familiares</title>
+</head>
+<body>
+
+
+
+<style>
+    body {
+    background-color : #DEB887;
+
+    }
+
+    h1 {
+    text-align: center;
+    color: #FF00FF;
+}
+</style>
+<div class="container" border="1">
+
+<h1> <font size = "7"><b>Datos de familiares:</b></font></h1>
+</div>
+
+<div class="container mt-5">
+    <table border="1" style="width:90%; margin-top:200px">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha de Nac.</th>
+            <th>Documento</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for familiar in family %}
+        <tr>
+            <td align="center">{{familiar.name}}</td>
+            <td align="center">{{familiar.birth}}</td>
+            <td align="center">{{familiar.document}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
